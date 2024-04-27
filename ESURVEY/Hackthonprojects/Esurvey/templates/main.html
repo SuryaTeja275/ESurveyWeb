@@ -1,0 +1,240 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+<div class="container">
+    {% if messages %}
+    <!--  -->
+    {% for message in messages%}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+      {% endfor %}
+      <!--  -->
+    </div>
+    {% endif %}
+  </div>
+    <header>
+        <nav class="navbar bg-secondary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1" style="font-size: 2rem;">E Survey Web Application</span>
+            </div>
+
+            <ul class="nav justify-content-center bg-secondary">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'main' %}" style="color: white; font-size: large;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'AU' %}" style="color: white; font-size: large;">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'CU' %}" style="color: white; font-size: large;">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'feedback' %}" style="color: white; font-size: large;">Feedback</a>
+                  </li>
+            </ul>
+
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" style="text-decoration: none">
+                        <button class="btn btn-outline-light" type="submit" style="margin-right: 13px;">Logout</button>
+                    </a>
+                </li>
+            </ul>
+
+          </nav>
+    </header>
+
+    <br><br>
+
+    <main>
+        <p style="text-align: center; font-family: 'Segoe UI'; font-weight: 400;">Customer feedback is golden for any sales team.</p>
+        <p style="text-align: center; font-family: 'Segoe UI'; font-weight: 400; margin-right: 7px;">But you don’t have to wait until a customer hits the “purchase” button to start gathering feedback.
+            You can use website surveys to understand why people are visiting your website, and how they found the overall experience—even
+            if they’re not a paying customer.
+        </p>
+        <p style="text-align: center; font-family: 'Segoe UI'; font-weight: 400;">That’s great data for marketing teams. It gives you insight into which areas are suiting the intent of your visitors (and which aren’t.)</p>
+
+        <br>
+        <h2 style="text-align: left; font-family: 'Segoe UI'; font-weight: 400; margin-left: 30px;">What is a Website Survey?</h2>
+
+        <p style="font-family: 'Segoe UI'; font-weight: 400; margin-left: 50px;">
+            <br>
+            A website survey is a series of questions your visitors are shown.  <br><br>
+
+            These surveys can be embedded into your content—like at the end of a blog post, for example.
+            But most often they’re small pop-ups, usually appearing on the entire screen or towards the bottom.
+            They’re more eye-catching this way.     <br><br>
+
+            Before we dive into the website survey examples, it’s interesting to note the different types of survey. For example, you can have:
+        </p>
+
+        <ul style="margin-left: 60px;">
+            <li><b>Technology Research Surveys:</b></li> <p>Explore the ever-evolving landscape of technology through insightful surveys, gathering data on trends, preferences, and innovations.</p>
+            <li><b>Educational Research Surveys:</b></li> <p>Navigate the realm of education with our surveys, aiming to enhance learning experiences by understanding preferences, challenges, and evolving needs. </p>
+            <li><b>Gaming Research Surveys:</b></li> <p>Dive into the world of gaming through engaging surveys, unraveling player behaviors, preferences, and industry trends for a pulse on the gaming community.</p>
+        </ul>
+
+
+        <br>
+        <h2 style="text-align: left; font-family: 'Segoe UI'; font-weight: 400; margin-left: 30px;">Website survey templates</h2>
+        <br>
+
+        <p style="margin-left: 60px;; font-family: 'Segoe UI'; font-weight: 400;">
+            If you're ready to launch your website survey, at ConvertFlow
+            we have lots of free <span style="color: blue;">website survey templates</span> in our template library.
+        </p>
+
+
+        <div class="main-box" style="width: fit-content; height: fit-content; border: 1px solid whitesmoke;">
+            <div class="card" style="width: 20rem; margin: 5em 5em 0 5em; display: inline-block;">
+                <img src="{%static 'img1.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Technology Research Surveys</h5>
+                    <p class="card-text">
+                        Explore the ever-evolving landscape of technology through insightful surveys, gathering data on trends, preferences, and innovations.
+                    </p>
+                    <a href="{% url 'TRS' %}" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 5em 5em 0 5em; display: inline-block;">
+                <img src="{%static 'img3.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Educational Research Surveys</h5>
+                    <p class="card-text">
+                        Navigate the realm of education with our surveys, aiming to enhance learning experiences by understanding preferences, challenges, and evolving needs.
+                    </p>
+                    <a href="{% url 'ERS' %}" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 5em 5em 0 5em; display: inline-block;">
+                <img src="{%static 'img2.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Gaming Research Surveys</h5>
+                    <p class="card-text">
+                        Dive into the world of gaming through engaging surveys, unraveling player behaviors, preferences, and industry trends for a pulse on the gaming community.
+                    </p>
+                    <a href="{% url 'GRS' %}" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+
+            <br>
+            <br><br>
+            <div class="card" style="width: 20rem; margin: 5em 5em 1em 5em; display: inline-block;">
+                <img src="{%static 'img4.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Statistical Research</h5>
+                    <p class="card-text">
+                        Based of current statistics of data
+                    </p>
+                    <a href="{% url 'NForm' %}" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 5em 5em 1em 5em; display: inline-block;">
+                <img src="{%static 'img5.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Questionnaire Survey</h5>
+                    <p class="card-text">
+                        Based on types of qns can be asked
+                    </p>
+                    <a href="#" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 5em 5em 1em 5em; display: inline-block;">
+                <img src="{%static 'img6.jpg'%}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Feedback</h5>
+                    <p class="card-text">
+                        This is a feedback type
+                    </p>
+                    <a href="{% url 'feedback' %}" class="btn btn-dark">Check it out</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <p style="margin-left: 40px; font-family: 'Segoe UI'; font-weight: 400;">
+            Thank you for exploring E Survey, your gateway to seamless insights. Dive into our user-friendly platform,
+            create impactful surveys, and unlock the power of data-driven decisions. Ready to revolutionize your <br> <center>survey experience?
+                Sign up now and embark on a journey of informed decision-making with E Survey!</center>
+        </p>
+
+    </main>
+
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #3e4551";
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+              <p>
+                Made with Passion by Team 20 of PFSD S-22
+              </p>
+            </div>
+
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="mb-4" />
+
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+
+          </p>
+        </section>
+        <!-- Section: CTA -->
+
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2024 Copyright:
+        <a class="text-white" href="#" style="text-decoration: none;"
+           >S22-20</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+    </footer>
+</body>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</html>

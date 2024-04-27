@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{% static 'feedback.css' %}">
+    <link rel="stylesheet" href="{% static 'feedback.css' %}">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Feedback Form</h1>
+        </div>
+    </nav>
+
+    <div class="feedback-container">
+        <form class="feedback-form" id="feedbackForm" method="POST" onsubmit="return validateForm()">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="nm" required>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Mobile</label>
+                <input type="tel" id="mobile" name="mb" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="ad" rows="4" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="survey-type">Type of Survey</label>
+                <select id="survey-type" name="st" required>
+                    <option value="">Select type</option>
+                    <option value="product_feedback">Research Survey</option>
+                    <option value="customer_service">Educational Survey</option>
+                    <option value="website_experience">Gaming Survey</option>
+                    <option value="website_experience">Filmy Survey</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="customer-feedback">Customer Feedback</label>
+                <textarea id="customer-feedback" name="cf" rows="4" required></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'feedback.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Research Survey</title>
+    <link rel="stylesheet" href="{% static 'GRS.css' %}">
+</head>
+<body>
+    <div class="survey-container"  >
+        <form class="survey-form" action="#" method="POST">
+            {% csrf_token %}
+            <h2>Gaming Research Survey</h2>
+            <div class="question">
+                <label for="question1">1. How many hours per week do you spend playing video games?</label>
+                <input type="number" id="question1" name="hours_spent_per_week" required>
+            </div>
+            <div class="question">
+                <label>2. What types of video games do you play most frequently? (Check all that apply)</label>
+                <div class="checkbox-options">
+                    <label for="game_type"><input type="checkbox" name="game_type" value="action"> Action</label>
+                    <label><input type="checkbox" name="game_type[]" value="adventure"> Adventure</label>
+                    <label><input type="checkbox" name="game_type[]" value="sports"> Sports</label>
+                    <label><input type="checkbox" name="game_type[]" value="strategy"> Strategy</label>
+                    <label><input type="checkbox" name="game_type[]" value="puzzle"> Puzzle</label>
+                </div>
+            </div>
+            <div class="question">
+                <label for="question3">3. How important are graphics and visual effects in a video game to you?</label>
+                <select id="question3" name="importance_of_graphics" required>
+                    <option value="" >Select an option</option>
+                    <option value="very_important">Very Important</option>
+                    <option value="important">Important</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="not_important">Not Important</option>
+                    <option value="not_at_all_important">Not At All Important</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question4">4. What gaming platforms do you primarily use? (Check all that apply)</label>
+                <div class="checkbox-options">
+                    <label><input type="checkbox" name="platform[]" value="pc"> PC</label>
+                    <label><input type="checkbox" name="platform[]" value="console"> Console</label>
+                    <label><input type="checkbox" name="platform[]" value="mobile"> Mobile</label>
+                    <label><input type="checkbox" name="platform[]" value="virtual_reality"> Virtual Reality</label>
+                    <label><input type="checkbox" name="platform[]" value="cloud_gaming"> Cloud Gaming</label>
+                </div>
+            </div>
+            <div class="question">
+                <label for="question5">5. Have you ever participated in competitive gaming (eSports) events?</label>
+                <select id="question5" name="participated_in_esports" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question6">6. How do you usually learn about new video games?</label>
+                <input type="text" id="question6" name="learn_about_new_games" required>
+            </div>
+            <div class="question">
+                <label for="question7">7. What aspects of a video game influence your purchasing decision the most?</label>
+                <textarea id="question7" name="purchasing_decision_factors" rows="4" required></textarea>
+            </div>
+            <div class="question">
+                <label for="question8">8. How often do you communicate with other players while gaming?</label>
+                <select id="question8" name="communication_with_players" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="always">Always</option>
+                    <option value="often">Often</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="never">Never</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

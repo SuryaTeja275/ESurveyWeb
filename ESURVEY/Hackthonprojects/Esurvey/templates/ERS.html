@@ -1,0 +1,78 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Research Survey</title>
+    <link rel="stylesheet" href="{% static 'ERS.css'%}">
+</head>
+<body>
+    <div class="survey-container">
+        <form class="survey-form" action="#" method="POST">
+            {% csrf_token %}
+            <h2>Educational Research Survey</h2>
+            <div class="question">
+                <label for="question1">1. How satisfied are you with the current education system?</label>
+                <select id="question1" name="question1" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question2">2. What improvements would you like to see in the education system?</label>
+                <textarea id="question2" name="question2" rows="4" required></textarea>
+            </div>
+            <div class="question">
+                <label for="question3">3. How effective do you find online learning platforms?</label>
+                <select id="question3" name="question3" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very_effective">Very Effective</option>
+                    <option value="effective">Effective</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="ineffective">Ineffective</option>
+                    <option value="very_ineffective">Very Ineffective</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question4">4. How important is practical learning in education?</label>
+                <input type="text" id="question4" name="question4" required>
+            </div>
+            <div class="question">
+                <label for="question5">5. Do you think standardized testing accurately measures student knowledge?</label>
+                <select id="question5" name="question5" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="unsure">Unsure</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question6">6. How important do you think extracurricular activities are for student development?</label>
+                <input type="text" id="question6" name="question6" required>
+            </div>
+            <div class="question">
+                <label for="question7">7. What factors do you believe contribute to student motivation?</label>
+                <textarea id="question7" name="question7" rows="4" required></textarea>
+            </div>
+            <div class="question">
+                <label for="question8">8. How satisfied are you with the quality of teaching in schools?</label>
+                <select id="question8" name="question8" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select>
+            </div>
+                </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

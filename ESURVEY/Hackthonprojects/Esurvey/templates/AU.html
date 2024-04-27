@@ -1,0 +1,57 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - E-Survey Website</title>
+    <link rel="stylesheet" href="{% static 'AU.css' %}">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>About Us</h1>
+        </div>
+        <div style="display:flex; align-items:flex-start; justify-content:start;">
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Home</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large;text-decoration:none; margin-left:20px;">About Us</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Contact</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Feedback</a>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Welcome to E-Survey</h2>
+                <p>E-Survey is a platform designed to simplify the process of creating and conducting online surveys.
+                    Our mission is to provide an intuitive and user-friendly experience for both survey creators and respondents.
+                    With E-Survey, you can easily create custom surveys, distribute them to your target audience, and collect valuable feedback in real-time.</p>
+            </div>
+
+        </section>
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                <img src="{% static 'J.jpeg' %}" alt="Junaid">
+                <h3>Junaid</h3>
+                <p>Co-founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'K.jpeg' %}" alt="Karthikeya">
+                <h3>Karthikeya Pavan</h3>
+                <p>Co-founder & CTO</p>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'S.jpeg' %}" alt="Sai Surya Teja">
+                <h3>Sai Surya Teja</h3>
+                <p>Managing Director</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Survey. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

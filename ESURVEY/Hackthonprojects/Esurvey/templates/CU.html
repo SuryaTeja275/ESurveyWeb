@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - E-Survey Website</title>
+    <link rel="stylesheet" href="{% static 'CU.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <div style="display:flex; align-items:flex-start; justify-content:start;">
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Home</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large;text-decoration:none; margin-left:20px;">About Us</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Contact</a>
+            <a class="nav-link" href="{% url 'login' %}" style="color: white; font-size: large; text-decoration:none; margin-left:20px;">Feedback</a>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-item">
+                <span class="icon">&#128248;</span>
+                <a href="https://www.instagram.com/example/" target="_blank">Instagram</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">&#128100;</span>
+                <a href="https://www.linkedin.com/in/example/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">&#128172;</span>
+                <a href="https://twitter.com/example" target="_blank">Twitter</a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">&#9993;</span>
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Survey. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

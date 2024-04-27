@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Research Survey</title>
+    <link rel="stylesheet" href="{% static 'TRS.css' %}">
+</head>
+<body>
+    <div class="survey-container">
+        <form class="survey-form" action="#" method="POST">
+            {% csrf_token %}
+            <h2>Technology Research Survey</h2>
+            <div class="question">
+                <label for="question1">1. How often do you use technology in your daily life?</label>
+                <select id="question1" name="question1" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="rarely">Rarely</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question2">2. What type of technology devices do you use most frequently?</label>
+                <input type="text" id="question2" name="question2" required>
+            </div>
+            <div class="question">
+                <label for="question3">3. How satisfied are you with the performance of your current technology devices?</label>
+                <input type="text" id="question3" name="question3" required>
+            </div>
+            <div class="question">
+                <label for="question4">4. How important is cybersecurity to you when using technology?</label>
+                <input type="text" id="question4" name="question4" required>
+            </div>
+            <div class="question">
+                <label for="question5">5. How likely are you to recommend your favorite technology brand to a friend?</label>
+                <select id="question5" name="question5" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="very_likely">Very Likely</option>
+                    <option value="likely">Likely</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="unlikely">Unlikely</option>
+                    <option value="very_unlikely">Very Unlikely</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="question6">6. How often do you upgrade your technology devices?</label>
+                <input type="text" id="question6" name="question6" required>
+            </div>
+            <div class="question">
+                <label for="question7">7. What features do you consider most important when purchasing a new technology device?</label>
+                <textarea id="question7" name="question7" rows="4" required></textarea>
+            </div>
+            <div class="question">
+                <label for="question8">8. How satisfied are you with the customer support provided by technology companies?</label>
+                <input type="text" id="question8" name="question8" required>
+            </div>
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
